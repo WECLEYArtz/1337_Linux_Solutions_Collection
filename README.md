@@ -59,8 +59,9 @@ setxkbmap -option altwin:swap_alt_win
 
 or make a startup script to automaticall detect it the keyboard and swap
 ```sh
-if lsusb | grep -q "Cherry Wired Keyboard" ; then
-    setxkbmap -option altwin:swap_alt_win`
+if lsusb | grep -q "CHERRY Wired Keyboard"; then
+    setxkbmap -option altwin:swap_alt_win
+fi
 ```
 
 NOTE: to unset the change:

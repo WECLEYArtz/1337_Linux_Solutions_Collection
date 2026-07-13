@@ -50,9 +50,12 @@ should work with chromium too, check the link > [source](https://universal-blue.
 
 ## Mac keyboard layout [SLOVED]
 
-if you want to mimic the old "Cherry Strait 3.0" Super and alt layout,
+if you want to mimic the old "Cherry Strait 3.0",
 you just need to swap `alt` and `super`:
-`setxkbmap -option altwin:swap_alt_win`
+
+```
+setxkbmap -option altwin:swap_alt_win
+```
 
 or make a startup script to automaticall detect it the keyboard and swap
 ```sh

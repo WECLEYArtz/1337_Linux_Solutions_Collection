@@ -3,9 +3,7 @@ A collection to solve comon linux difficulty for 1337 posts (sepecially E3)
 Or list for unsolved known ones
 
 
-# SOLVED
-## Sound issue:
-###  Solution (solution by: unknown)
+## Sound issue [SLOVED]
 Create the following directory
 `mkdir -p ~/.config/systemd/user`
 
@@ -29,15 +27,20 @@ systemctl --user enable restart-pulseaudio.service
 ```
 
 
-## Laggy Brave browser
-### Solution 
+## Laggy Brave browser [SLOVED]
 
 - Create the file:
-```~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/brave-flags.conf
+```
+~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/brave-flags.conf
 ```
 
 - Insert The Content:
-```--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder
+```
+--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL
+```
+or
+```
+--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder
 ```
 
 - Save, Then restart brave
@@ -45,8 +48,7 @@ systemctl --user enable restart-pulseaudio.service
 should work with chromium too, check the link > [source](https://universal-blue.discourse.group/t/launch-chromium-browser-with-flags-flatpak/8358)
 
 
-## Mac keyboard layout:
-###  Solution
+## Mac keyboard layout [SLOVED]
 
 if you want to mimic the old "Cherry Strait 3.0" Super and alt layout,
 you just need to swap `alt` and `super`:

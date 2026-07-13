@@ -1,2 +1,66 @@
 # 1337_Linux_Solutions_Collection
-A collection to solve any knowns linux difficulty, or atleast list it as to be solved
+A collection to solve comon linux difficulty for 1337 posts (sepecially E3)
+Or list for unsolved known ones
+
+
+# SOLVED
+## Sound issue:
+###  Solution (solution by: unknown)
+Create the following directory
+`mkdir -p ~/.config/systemd/user`
+
+Open this file with your editor
+`~/.config/systemd/user/restart-pulseaudio.service`
+
+Insert the following content:
+```
+[Unit]
+Description=Restart PulseAudio after login
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl --user restart pulseaudio
+
+[Install]
+WantedBy=default.target
+
+systemctl --user daemon-reload                        
+systemctl --user enable restart-pulseaudio.service
+```
+
+
+## Laggy Brave browser
+### Solution 
+
+- Create the file:
+```~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/brave-flags.conf
+```
+
+- Insert The Content:
+```--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder
+```
+
+- Save, Then restart brave
+
+should work with chromium too, check the link > [source](https://universal-blue.discourse.group/t/launch-chromium-browser-with-flags-flatpak/8358)
+
+
+## Mac keyboard layout:
+###  Solution
+
+if you want to mimic the old "Cherry Strait 3.0" Super and alt layout,
+you just need to swap `alt` and `super`:
+`setxkbmap -option altwin:swap_alt_win`
+
+or make a startup script to automaticall detect it the keyboard and swap
+```sh
+if lsusb | grep -q "Cherry Wired Keyboard" ; then
+    setxkbmap -option altwin:swap_alt_win`
+```
+
+NOTE: to unset the change:
+`setxkbmap -option`
+
+
+# UNSOLVED
+uuuuuuh, everything?

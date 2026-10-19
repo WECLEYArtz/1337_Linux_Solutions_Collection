@@ -48,7 +48,8 @@ or
 should work with chromium too, check the link > [source](https://universal-blue.discourse.group/t/launch-chromium-browser-with-flags-flatpak/8358)
 
 ## Laggy Youtube
-Just disable Ambient mode
+Just disable Ambient mode.
+
 Open a youtube video > click the gear icon > disable Ambient mode
 
 ## Mac keyboard layout
